@@ -1,6 +1,7 @@
 <?php
+$ad=$_GET['adr'];
  
-$adresse = "http://www.marmiton.org/recettes/recette_couscous_335630.aspx";
+$adresse = "http://www.marmiton.org/recettes/".$ad;
 $page = file_get_contents ($adresse);
 
 //Titre

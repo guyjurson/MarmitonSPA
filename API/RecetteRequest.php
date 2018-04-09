@@ -1,6 +1,8 @@
 <?php
+
+$ingr=$_GET['aqt'];
  
-$adresse = "http://www.marmiton.org/recettes/recherche.aspx?type=all&aqt=pomme-poire";
+$adresse = "http://www.marmiton.org/recettes/recherche.aspx?type=all&aqt=".$ingr;
 $page = file_get_contents ($adresse);
  
 preg_match_all('#(<a  class="recipe-card" href=")(.*)">#', $page, $lien);
