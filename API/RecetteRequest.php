@@ -14,7 +14,7 @@ var_dump($titre[2]);*/
 
 $i=0;
 while ($i<count($lien[2])){
-	if(strpos($lien[2][$i], "video/")==false){
+	if(strpos($lien[2][$i], "recettes/")){
 		echo "<ul>".$titre[2][$i]."<li> http://www.marmiton.org".$lien[2][$i]."</li></ul>";
 	}
 	$i+=1;
