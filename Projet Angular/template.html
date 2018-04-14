@@ -1,0 +1,30 @@
+<md-card>
+  <md-card-title>
+    <md-card-title-text>
+      <span class="md-headline">{{recette.titre}}</span>
+      <span class="md-subhead">Pour {{recette.info.nbP}} personnes</span>
+    </md-card-title-text>
+  </md-card-title>
+  <md-card-actions layout="row" layout-align="start center">
+    <md-button ng-click="showHide()" ng-hide="bool">Plus</md-button>
+    <md-button ng-click="showHide()" ng-show="bool">Moins</md-button>
+    <md-card-icon-actions>
+
+    </md-card-icon-actions>
+  </md-card-actions>
+  <md-card-content ng-hide='!bool'>
+    <div>
+      Ingrédients nécessaires :
+      <div ng-repeat="ingredient in recette.info.recette">
+        {{ingredient.q}}{{ingredient.ing}}
+      </div>
+      <p>Temps de préparation : {{recette.info.prep}}</p>
+      <p>Difficulté de préparation : {{recette.info.dif}}</p>
+      <p>Cout de préparation : {{recette.info.cout}}</p>
+      Etapes de préparation :
+      <div ng-repeat="et in recette.info.etapes">
+        {{et.title}} : {{et.desc}}
+      </div>
+    </div>
+  </md-card-content>
+</md-card>
